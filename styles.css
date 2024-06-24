@@ -1,0 +1,122 @@
+@font-face {
+    font-family: 'Golden Avocado Sans';
+    src: url('fonts/Golden Avocado Sans.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Patua One';
+    src: url('fonts/PatuaOne-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Patua One', serif;
+    background: url('todo app background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    text-align: center;
+    color: #333;
+    font-family: 'Golden Avocado Sans', serif;
+}
+
+form {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+input[type="text"], input[type="date"] {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    color: #333;
+    background-color: #f9f9f9;
+    font-family: 'Patua One', serif;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    background-color: #ab3d60; /* Darker accent color */
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: 'Patua One', serif;
+}
+
+button:hover {
+    background-color: #e16f59; /* Lighter accent color */
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    color: #333;
+    font-family: 'Patua One', serif;
+}
+
+li.completed span {
+    text-decoration: line-through;
+    color: #888;
+}
+
+.error-message {
+    color: red;
+    text-align: center;
+}
+
+.task-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.task-buttons button {
+    padding: 5px 10px;
+    font-size: 14px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.task-buttons .edit-btn {
+    background-color: #00c897;
+    color: white;
+}
+
+.task-buttons .delete-btn {
+    background-color: #051041;
+    color: white;
+}
+
+#calendar {
+    margin-top: 20px;
+}
