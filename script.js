@@ -88,6 +88,18 @@ document.addEventListener('DOMContentLoaded', function() {
                 taskList.appendChild(taskItem);
             }
         });
+
+        checkDeadlines();
+    }
+
+    function checkDeadlines() {
+        const today = new Date().toISOString().split('T')[0]; // Get today's date in YYYY-MM-DD format
+
+        tasks.forEach(task => {
+            if (task.deadline === today && !task.completed) {
+                alert(`Reminder: You have a task due today - "${task.text}"`);
+            }
+        });
     }
 
     function toggleComplete(index) {
@@ -122,7 +134,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     renderTasks();
 
-    // FullCalendar initialization
     var calendarEl = document.getElementById('calendar');
     var calendar = new FullCalendar.Calendar(calendarEl, {
         initialView: 'dayGridMonth',
